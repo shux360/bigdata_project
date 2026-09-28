@@ -1,0 +1,5 @@
+report_date,household_id,grid_zone,consumption_kwh,solar_kwh,net_grid_kwh,tariff_rate,billing_tier,subsidy_flag,estimated_bill
+2026-09-28,H003,west,18.420,4.815,13.605,0.3100,peak,false,4.22
+2026-09-28,H007,west,12.160,5.230,6.930,0.1200,lifeline,true,0.83
+2026-09-28,H010,east,15.780,8.620,7.160,0.2200,standard,false,1.58
+

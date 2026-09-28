@@ -1,0 +1,9 @@
+.env
+__pycache__/
+.pytest_cache/
+*.pyc
+data/batch/*.csv
+data/reports/*.csv
+spark-checkpoints/
+report/_rendered/
+
