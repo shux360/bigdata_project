@@ -45,7 +45,7 @@ services:
       retries: 12
 
   spark:
-    image: bitnami/spark:3.5.1
+    image: spark:3.5.1-python3
     depends_on:
       kafka: {condition: service_healthy}
       postgres: {condition: service_healthy}
@@ -55,7 +55,7 @@ services:
     volumes:
       - ./src:/opt/project/src:ro
       - ./spark-checkpoints:/opt/project/checkpoints
-    command: ["/opt/bitnami/spark/bin/spark-submit", "--packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1,org.postgresql:postgresql:42.7.4", "/opt/project/src/processing/stream_processor.py"]
+    command: ["/opt/spark/bin/spark-submit", "--packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1,org.postgresql:postgresql:42.7.4", "/opt/project/src/processing/stream_processor.py"]
 
   meter-producer:
     build: .
