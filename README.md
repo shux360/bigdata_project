@@ -103,8 +103,8 @@ The tests verify source contracts, non-negative measurements, tariff coverage an
 
 Replace the placeholders before submission.
 
-- **Team Member 1 — [Name / Student ID]:** Kafka and meter simulator; Spark streaming transformations/checkpointing; unit tests; architecture and processing sections of report.
-- **Team Member 2 — [Name / Student ID]:** Tariff simulator and Airflow DAG; PostgreSQL/API; Prometheus/Grafana; Docker Compose; results, observability and limitations sections.
+- **Madakaladeniya I.U — EG/2021/4651:** Kafka and meter simulator; Spark streaming transformations/checkpointing; unit tests; architecture and processing sections of report.
+- **Wijesinghe S.A — EG/2021/4877:** Tariff simulator and Airflow DAG; PostgreSQL/API; Prometheus/Grafana; Docker Compose; results, observability and limitations sections.
 - **Joint work:** architecture decision, integration testing, demo rehearsal, code review and final report editing. Each member should be ready to explain all core logic.
 
 ## Repository map
