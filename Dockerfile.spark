@@ -1,0 +1,12 @@
+FROM spark:3.5.1-python3
+USER root
+RUN mkdir -p /tmp/.ivy2 /opt/project/checkpoints \
+ && curl -kfL https://repo1.maven.org/maven2/org/apache/spark/spark-sql-kafka-0-10_2.12/3.5.1/spark-sql-kafka-0-10_2.12-3.5.1.jar -o /opt/spark/jars/spark-sql-kafka-0-10_2.12-3.5.1.jar \
+ && curl -kfL https://repo1.maven.org/maven2/org/apache/spark/spark-token-provider-kafka-0-10_2.12/3.5.1/spark-token-provider-kafka-0-10_2.12-3.5.1.jar -o /opt/spark/jars/spark-token-provider-kafka-0-10_2.12-3.5.1.jar \
+ && curl -kfL https://repo1.maven.org/maven2/org/apache/kafka/kafka-clients/3.4.1/kafka-clients-3.4.1.jar -o /opt/spark/jars/kafka-clients-3.4.1.jar \
+ && curl -kfL https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.jar -o /opt/spark/jars/jsr305-3.0.0.jar \
+ && curl -kfL https://repo1.maven.org/maven2/org/apache/commons/commons-pool2/2.11.1/commons-pool2-2.11.1.jar -o /opt/spark/jars/commons-pool2-2.11.1.jar \
+ && curl -kfL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.4/postgresql-42.7.4.jar -o /opt/spark/jars/postgresql-42.7.4.jar \
+ && chown -R 1001:0 /tmp/.ivy2 /opt/project
+COPY --chown=1001:0 src /opt/project/src
+USER root

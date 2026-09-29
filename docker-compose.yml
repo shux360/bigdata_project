@@ -29,7 +29,9 @@ services:
       retries: 12
 
   postgres:
-    image: postgres:16-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
     ports: ["5432:5432"]
     environment:
       POSTGRES_DB: smartgrid
@@ -37,7 +39,6 @@ services:
       POSTGRES_PASSWORD: smartgrid
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - ./sql/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U smartgrid"]
       interval: 5s
@@ -45,17 +46,20 @@ services:
       retries: 12
 
   spark:
-    image: spark:3.5.1-python3
+    build:
+      context: .
+      dockerfile: Dockerfile.spark
     depends_on:
       kafka: {condition: service_healthy}
       postgres: {condition: service_healthy}
     environment:
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       POSTGRES_HOST: postgres
+      HOME: /tmp
+      SPARK_SUBMIT_OPTS: -Duser.home=/tmp
     volumes:
-      - ./src:/opt/project/src:ro
       - ./spark-checkpoints:/opt/project/checkpoints
-    command: ["/opt/spark/bin/spark-submit", "--packages", "org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1,org.postgresql:postgresql:42.7.4", "/opt/project/src/processing/stream_processor.py"]
+    command: ["/opt/spark/bin/spark-submit", "/opt/project/src/processing/stream_processor.py"]
 
   meter-producer:
     build: .
@@ -75,7 +79,9 @@ services:
     command: ["uvicorn", "src.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
 
   airflow:
-    image: apache/airflow:2.10.2-python3.11
+    build:
+      context: .
+      dockerfile: Dockerfile.airflow
     depends_on:
       kafka: {condition: service_healthy}
       postgres: {condition: service_healthy}
@@ -86,19 +92,15 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       POSTGRES_HOST: postgres
-      _PIP_ADDITIONAL_REQUIREMENTS: confluent-kafka==2.5.3 psycopg2-binary==2.9.9
     volumes:
-      - ./airflow/dags:/opt/airflow/dags:ro
-      - ./src:/opt/airflow/project/src:ro
       - ./data:/opt/airflow/project/data
     command: standalone
 
   prometheus:
-    image: prom/prometheus:v2.54.1
+    build:
+      context: .
+      dockerfile: Dockerfile.prometheus
     ports: ["9090:9090"]
-    volumes:
-      - ./observability/prometheus.yml:/etc/prometheus/prometheus.yml:ro
-      - ./observability/alerts.yml:/etc/prometheus/alerts.yml:ro
 
   grafana:
     image: grafana/grafana:11.2.0

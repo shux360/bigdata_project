@@ -1,0 +1,7 @@
+FROM apache/airflow:2.10.2-python3.11
+USER airflow
+RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pythonhosted.org confluent-kafka==2.5.3 psycopg2-binary==2.9.9
+USER root
+COPY --chown=airflow:root airflow/dags /opt/airflow/dags
+COPY --chown=airflow:root src /opt/airflow/project/src
+USER airflow

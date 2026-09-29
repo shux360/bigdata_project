@@ -1,0 +1,3 @@
+FROM prom/prometheus:v2.54.1
+COPY observability/prometheus.yml /etc/prometheus/prometheus.yml
+COPY observability/alerts.yml /etc/prometheus/alerts.yml
