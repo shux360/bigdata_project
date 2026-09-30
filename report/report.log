@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.16)  30 SEP 2026 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.16)  30 SEP 2026 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -992,45 +992,51 @@ Package hyperref Info: Link coloring ON on input line 12.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-5.
+<../assets/ruhuna-crest.png, id=74, 602.25pt x 602.25pt>
+File: ../assets/ruhuna-crest.png Graphic file (type png)
+<use ../assets/ruhuna-crest.png>
+Package pdftex.def Info: ../assets/ruhuna-crest.png  used on input line 16.
+(pdftex.def)             Requested size: 88.20161pt x 88.2037pt.
+[1
+
+{C:/Users/Shammika Wijesinghe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
+lm-ec.enc} <../assets/ruhuna-crest.png>] (report.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
+.
 
 (C:\Users\Shammika Wijesinghe\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr
 .fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-5.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
+.
 
 (C:\Users\Shammika Wijesinghe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm
 .fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-25.
+4.
 
 (C:\Users\Shammika Wijesinghe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslms
 y.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-25.
+4.
 
 (C:\Users\Shammika Wijesinghe\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlme
 x.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 25.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 25.
- [1
-
-{C:/Users/Shammika Wijesinghe/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
-{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/
-lm-ec.enc}] (report.toc)
+(Font)              <6> on input line 4.
+)
 \tf@toc=\write5
 \openout5 = `report.toc'.
 
@@ -1039,25 +1045,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.35 \tableofcontents\newpage
+l.36 \tableofcontents\newpage
                               [1]
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []|\T1/lmr/m/n/10 (+20) Idempotent Kafka pro-ducer;
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 \T1/lmr/m/n/10 (+20) household-keyed events ev-ery 3
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--58
 []|\T1/lmr/m/n/10 (+20) Indexed Post-greSQL ta-bles and
  []
 
 [2]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-4.
+5.
 
 (C:\Users\Shammika Wijesinghe\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt
 .fd
@@ -1072,16 +1078,26 @@ pt>
 File: ../assets/smart-grid-kappa-architecture.jpeg Graphic file (type jpg)
 <use ../assets/smart-grid-kappa-architecture.jpeg>
 Package pdftex.def Info: ../assets/smart-grid-kappa-architecture.jpeg  used on 
-input line 67.
+input line 68.
 (pdftex.def)             Requested size: 472.2964pt x 286.80605pt.
  [3 <../assets/smart-grid-kappa-architecture.jpeg>] [4] [5{C:/Users/Shammika Wi
 jesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/S
 hammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
 nc}{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
 lm/lm-mathsy.enc}]
-Package pgfplots info on input line 139: Using 'lua backend=false' for axis: x 
+Package pgfplots info on input line 140: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [6] [7] [8] (report.aux)
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]|\T1/lmr/m/n/10 (+20) Wijesinghe SA -
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--168
+[]|\T1/lmr/m/n/10 (+20) Madakaladeniya IU -
+ []
+
+[7] (report.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -1090,26 +1106,25 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D9C60947AF901F5F06E87BF15F617D1F;3225.
  ) 
 Here is how much of TeX's memory you used:
- 34206 strings out of 467510
- 810798 string characters out of 5401954
+ 34195 strings out of 467510
+ 810766 string characters out of 5401954
  1350711 words of memory out of 5000000
- 62744 multiletter control sequences out of 15000+600000
- 691784 words of font info for 149 fonts, out of 8000000 for 9000
+ 62743 multiletter control sequences out of 15000+600000
+ 685367 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,94p,1005b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,94p,1005b,2286s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/lm/lmbx10.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/lm/lmbx12.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/Shammika Wijesinghe/AppDa
 ta/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Shammika Wij
-esinghe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users
-/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10
-.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmsy10.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/lm/lmtt10.pfb>
-Output written on report.pdf (9 pages, 489556 bytes).
+esinghe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/User
+s/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy1
+0.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/lm/lmtt10.pfb>
+Output written on report.pdf (8 pages, 516884 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 35482 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 188 PDF objects out of 1000 (max. 8388607)
+ 33 named destinations out of 1000 (max. 500000)
+ 31391 words of extra memory for PDF output out of 35830 (max. 10000000)
 

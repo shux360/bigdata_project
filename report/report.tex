@@ -11,25 +11,26 @@
 \newcommand{\code}[1]{\texttt{#1}}
 \begin{document}
 \begin{titlepage}
-\centering\vspace*{2.0cm}
-{\color{blue}\large DATA ENGINEERING MINI-PROJECT\par}\vspace{0.8cm}
-{\Huge\bfseries\color{navy} Smart Grid Pulse\par}\vspace{0.3cm}
-{\Large A Kappa Pipeline for Live Grid Monitoring and Daily Billing\par}\vspace{1.4cm}
-\begin{tikzpicture}[scale=.95]
-\draw[fill=pale,draw=blue,very thick,rounded corners] (0,0) rectangle (10,3.3);
-\foreach \x/\h in {1/1.2,2/2.0,3/1.5,4/2.5,5/1.8,6/2.7,7/2.1,8/2.8,9/1.6}{\draw[green,very thick] (\x,.4)--(\x,\h);}
-\draw[orange,very thick,smooth] plot coordinates{(.5,1.1)(2,1.5)(3.5,1.2)(5,2.0)(6.5,1.6)(8,2.3)(9.5,2.0)};
-\node[navy] at (5,.15) {consumption \quad renewable contribution \quad net grid draw};
-\end{tikzpicture}
+\centering
+\vspace*{0.95cm}
+\includegraphics[height=3.1cm]{../assets/ruhuna-crest.png}
+
+\vspace{1.25cm}
+{\Large\bfseries Department of Computer Engineering\par}
+\vspace{0.25cm}
+{\Large\bfseries Faculty of Engineering\par}
+\vspace{0.25cm}
+{\Large\bfseries University of Ruhuna\par}
+
+\vspace{2.25cm}
+{\Large\bfseries EC8202 Big Data Analytics\par}
+
+\vspace{1.2cm}
+{\large\bfseries Madakaladeniya I.U. (EG/2021/4651)\par}
+\vspace{0.3cm}
+{\large\bfseries Wijesinghe S.A. (EG/2021/4877)\par}
+
 \vfill
-\begin{tabular}{rl}
-Module: & EC8203 - Big Data Analytics\\
-Member 1: & Madakaladeniya I.U / EG/2021/4651\\
-Member 2: & Wijesinghe S.A / EG/2021/4877\\
-Submission date: & 30 September 2026\\
-\end{tabular}
-\vfill
-\textit{One simulated day equals five minutes.}\par
 \end{titlepage}
 
 \tableofcontents\newpage
@@ -156,13 +157,13 @@ The single Kafka broker, local Spark process, SQLite-backed Airflow metadata and
 At production scale we would deploy replicated Kafka with topic compaction for tariffs, Spark on Kubernetes with remote checkpoints, Airflow with PostgreSQL metadata and distributed workers, and managed PostgreSQL with partitioning and replicas. Raw events would also land in versioned Parquet on object storage to support inexpensive long-term replay. A schema registry, dead-letter topic, contract tests, OpenTelemetry traces and end-to-end freshness service-level objectives would strengthen governance and diagnosis. Billing would use interval tariffs, export credits and immutable tariff-effective periods rather than only the latest rate.
 
 \section{Team Contributions and Delivery Plan}
-The implementation is scoped for two members with balanced ownership and cross-review. Names and student IDs must replace the placeholders before submission.
+The implementation is scoped for two members with balanced ownership and cross-review.
 
 \begin{table}[H]\centering\small
 \caption{Two-person contribution statement}
 \begin{tabularx}{\textwidth}{p{.24\textwidth}X X}\toprule & Primary implementation & Report/demo responsibility \\\midrule
-Member 1 [Name/ID] & Meter simulator, Kafka, Spark transformations, checkpointing, tests & Architecture decision, processing narrative, Spark demonstration\\
-Member 2 [Name/ID] & Tariff source, Airflow, PostgreSQL, API, Prometheus/Grafana, Compose & Stack rationale, observability/results, scheduled-report demonstration\\
+Wijesinghe SA - EG/2021/4877 & Meter simulator, Kafka, Spark transformations, checkpointing, tests & Architecture decision, processing narrative, Spark demonstration\\
+Madakaladeniya IU - EG/2021/4651 & Tariff source, Airflow, PostgreSQL, API, Prometheus/Grafana, Compose & Stack rationale, observability/results, scheduled-report demonstration\\
 Joint & Integration, code review, failure testing & Final editing, limitations, rehearsal; both defend all core logic\\\bottomrule
 \end{tabularx}\end{table}
 
