@@ -1,5 +1,6 @@
 import json, random, time, uuid
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from confluent_kafka import Producer
 from src.common.config import KAFKA
 from src.common.logging import configure
@@ -10,7 +11,10 @@ ZONES = ["north", "south", "east", "west"]
 def build_reading(index: int, now=None) -> dict:
     now = now or datetime.now(timezone.utc)
     consumption = round(random.uniform(0.25, 4.5), 3)
-    daylight = 6 <= now.hour <= 18
+    # Event timestamps remain in UTC, but solar production follows local
+    # daylight in Sri Lanka rather than the UTC clock.
+    local_time = now.astimezone(ZoneInfo("Asia/Colombo"))
+    daylight = 6 <= local_time.hour <= 18
     solar = round(random.uniform(0, 3.0) if daylight else 0.0, 3)
     return {"event_id": str(uuid.uuid4()), "meter_id": f"M{index:03d}",
             "household_id": f"H{index:03d}", "power_consumption_kwh": consumption,
@@ -28,4 +32,3 @@ def main():
         time.sleep(3)
 
 if __name__ == "__main__": main()
-

@@ -4,4 +4,6 @@ RUN pip install --no-cache-dir --trusted-host pypi.org --trusted-host files.pyth
 USER root
 COPY --chown=airflow:root airflow/dags /opt/airflow/dags
 COPY --chown=airflow:root src /opt/airflow/project/src
+RUN mkdir -p /opt/airflow/project/data/batch /opt/airflow/project/data/reports \
+ && chown -R airflow:root /opt/airflow/project/data
 USER airflow

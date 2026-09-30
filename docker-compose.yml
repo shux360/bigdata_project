@@ -92,8 +92,6 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: sqlite:////opt/airflow/airflow.db
       KAFKA_BOOTSTRAP_SERVERS: kafka:9092
       POSTGRES_HOST: postgres
-    volumes:
-      - ./data:/opt/airflow/project/data
     command: standalone
 
   prometheus:
@@ -103,12 +101,12 @@ services:
     ports: ["9090:9090"]
 
   grafana:
-    image: grafana/grafana:11.2.0
+    build:
+      context: .
+      dockerfile: Dockerfile.grafana
     ports: ["3000:3000"]
     environment:
       GF_SECURITY_ADMIN_PASSWORD: admin
-    volumes:
-      - ./observability/grafana:/etc/grafana/provisioning:ro
     depends_on: [prometheus]
 
 volumes:
