@@ -4,19 +4,9 @@ A complete Kappa-style data platform for real-time grid monitoring and daily hou
 
 ## Architecture
 
-```mermaid
-flowchart LR
-  M[Python smart-meter simulator] -->|meter-readings| K[(Kafka)]
-  T[Airflow: daily tariff simulator] -->|tariff-updates| K
-  K --> S[Spark Structured Streaming]
-  S --> P[(PostgreSQL)]
-  T --> R[Daily reconciliation job]
-  P --> R --> P
-  P --> A[FastAPI serving layer]
-  A --> U[Live grid / billing clients]
-  A --> PR[Prometheus] --> G[Grafana]
-  PR --> AL[Health and error-rate alerts]
-```
+![Smart Grid Pulse Kappa-style data platform architecture](assets/smart-grid-kappa-architecture.jpeg)
+
+The diagram shows the five logical areas used throughout the implementation and demo: sources and orchestration, the Kafka event backbone, Spark processing, storage and serving, and observability. The dashed outer boundary is the Docker Compose deployment; the tariff CSV and consolidated billing CSV are persisted outputs.
 
 The Kappa choice keeps Kafka as the replayable event log and avoids parallel batch/stream business logic. The daily CSV remains a genuine scheduled source; Airflow validates, publishes, loads, and reconciles it. Simulated time is compressed so **one day equals five minutes**.
 

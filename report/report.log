@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.16)  28 SEP 2026 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.7.16)  30 SEP 2026 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,13 +1067,21 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [3] [4{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dv
-ips/lm/lm-rm.enc}{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fo
-nts/enc/dvips/lm/lm-mathit.enc}{C:/Users/Shammika Wijesinghe/AppData/Local/Prog
-rams/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-Package pgfplots info on input line 150: Using 'lua backend=false' for axis: x 
+<../assets/smart-grid-kappa-architecture.jpeg, id=110, 1548.78625pt x 940.51375
+pt>
+File: ../assets/smart-grid-kappa-architecture.jpeg Graphic file (type jpg)
+<use ../assets/smart-grid-kappa-architecture.jpeg>
+Package pdftex.def Info: ../assets/smart-grid-kappa-architecture.jpeg  used on 
+input line 67.
+(pdftex.def)             Requested size: 472.2964pt x 286.80605pt.
+ [3 <../assets/smart-grid-kappa-architecture.jpeg>] [4] [5{C:/Users/Shammika Wi
+jesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/S
+hammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
+nc}{C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/
+lm/lm-mathsy.enc}]
+Package pgfplots info on input line 139: Using 'lua backend=false' for axis: x 
 coord trafo unsupported.
- [5] [6] [7] (report.aux)
+ [6] [7] [8] (report.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
@@ -1082,10 +1090,10 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: D9C60947AF901F5F06E87BF15F617D1F;3225.
  ) 
 Here is how much of TeX's memory you used:
- 34331 strings out of 467510
- 813165 string characters out of 5401954
- 1353711 words of memory out of 5000000
- 62870 multiletter control sequences out of 15000+600000
+ 34206 strings out of 467510
+ 810798 string characters out of 5401954
+ 1350711 words of memory out of 5000000
+ 62744 multiletter control sequences out of 15000+600000
  691784 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,94p,1005b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1099,9 +1107,9 @@ esinghe/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users
 .pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/lm/lmsy10.pfb><C:/Users/Shammika Wijesinghe/AppData/Local/Programs/MiKTeX/
 fonts/type1/public/lm/lmtt10.pfb>
-Output written on report.pdf (8 pages, 232193 bytes).
+Output written on report.pdf (9 pages, 489556 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 33 named destinations out of 1000 (max. 500000)
- 35477 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 35482 words of extra memory for PDF output out of 35830 (max. 10000000)
 

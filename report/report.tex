@@ -64,19 +64,8 @@ The dominant workload is a continuous append-only meter stream. Operators requir
 All changes are events. Meter readings enter \code{meter-readings}; tariff rows enter \code{tariff-updates}, keyed by household. Spark processes the live stream and can recompute it from earlier offsets when logic changes. Airflow remains valuable: it owns the daily file boundary, publication, reference-table upsert and scheduled report. Kappa therefore describes the processing model, not the absence of orchestration or scheduled inputs.
 
 \begin{figure}[H]\centering
-\begin{tikzpicture}[node distance=9mm and 11mm, every node/.style={font=\small}, box/.style={draw=blue,rounded corners,fill=pale,minimum height=9mm,align=center}, store/.style={draw=navy,cylinder,shape border rotate=90,aspect=.25,fill=white,minimum width=18mm,minimum height=12mm,align=center}, arr/.style={-{Stealth},thick,draw=navy}]
-\node[box] (meter) {Meter\\simulator};
-\node[box,below=of meter] (tariff) {Daily tariff\\CSV};
-\node[store,right=of meter,yshift=-8mm] (kafka) {Kafka\\event log};
-\node[box,right=of kafka,yshift=8mm] (spark) {Spark Structured\\Streaming};
-\node[box,right=of kafka,yshift=-11mm] (airflow) {Airflow daily\\orchestration};
-\node[store,right=of spark,yshift=-8mm] (pg) {PostgreSQL\\serving store};
-\node[box,right=of pg,yshift=7mm] (api) {FastAPI};
-\node[box,right=of pg,yshift=-9mm] (report) {Daily CSV\\report};
-\node[box,below=of pg,yshift=-2mm] (obs) {Prometheus + Grafana\\logs + alerts};
-\draw[arr] (meter)--node[above]{events}(kafka);\draw[arr] (tariff)--(airflow);\draw[arr] (airflow)--node[below]{reference events}(kafka);\draw[arr] (kafka)--(spark);\draw[arr] (spark)--(pg);\draw[arr] (airflow)--(pg);\draw[arr] (pg)--(api);\draw[arr] (pg)--(report);\draw[arr] (api)--(obs);
-\end{tikzpicture}
-\caption{Implemented Kappa-oriented architecture and control path}
+\includegraphics[width=\textwidth,height=.78\textheight,keepaspectratio]{../assets/smart-grid-kappa-architecture.jpeg}
+\caption{Implemented Smart Grid Pulse Kappa-style platform: sources and orchestration, Kafka event backbone, Spark processing, storage and serving, and observability.}
 \end{figure}
 
 \subsection{Rejected Lambda alternative}
